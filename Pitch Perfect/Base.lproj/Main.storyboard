@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,84 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kic-su-dUl">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="Microphone"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ngv-7u-c0a"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2X-by-jEI">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSm-DW-VbP">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="Stop"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="176" y="535" width="50" height="50"/>
+                                </variation>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xTS-bF-AJT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TSm-DW-VbP" secondAttribute="bottom" constant="15" id="2V1-Ux-oeZ"/>
+                            <constraint firstItem="TSm-DW-VbP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MaW-jm-aBd"/>
+                            <constraint firstItem="Kic-su-dUl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qdk-Km-IzC"/>
+                            <constraint firstItem="Kic-su-dUl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="alY-TV-mmo"/>
+                            <constraint firstItem="C2X-by-jEI" firstAttribute="top" secondItem="Kic-su-dUl" secondAttribute="bottom" constant="8" id="laG-wl-8pf"/>
+                            <constraint firstItem="C2X-by-jEI" firstAttribute="centerX" secondItem="Kic-su-dUl" secondAttribute="centerX" id="rTW-aO-k6s"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Kic-su-dUl"/>
+                                <exclude reference="C2X-by-jEI"/>
+                                <exclude reference="TSm-DW-VbP"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Qdk-Km-IzC"/>
+                                <exclude reference="alY-TV-mmo"/>
+                                <exclude reference="laG-wl-8pf"/>
+                                <exclude reference="rTW-aO-k6s"/>
+                                <exclude reference="MaW-jm-aBd"/>
+                                <exclude reference="2V1-Ux-oeZ"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Kic-su-dUl"/>
+                                <include reference="C2X-by-jEI"/>
+                                <include reference="TSm-DW-VbP"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Qdk-Km-IzC"/>
+                                <include reference="alY-TV-mmo"/>
+                                <include reference="laG-wl-8pf"/>
+                                <include reference="rTW-aO-k6s"/>
+                                <include reference="MaW-jm-aBd"/>
+                                <include reference="2V1-Ux-oeZ"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="recordButton" destination="Kic-su-dUl" id="Oml-v5-6Ws"/>
+                        <outlet property="recordingInProgress" destination="C2X-by-jEI" id="fr0-Te-cBM"/>
+                        <outlet property="stopButton" destination="TSm-DW-VbP" id="CIS-O9-w2s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="486" y="442"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Microphone" width="100" height="100"/>
+        <image name="Stop" width="50" height="50"/>
+    </resources>
 </document>
