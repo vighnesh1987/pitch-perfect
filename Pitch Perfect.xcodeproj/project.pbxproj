@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EB2090AB1C3F312E00F967A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2090AA1C3F312E00F967A7 /* AppDelegate.swift */; };
-		EB2090AD1C3F312E00F967A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2090AC1C3F312E00F967A7 /* ViewController.swift */; };
+		EB2090AD1C3F312E00F967A7 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2090AC1C3F312E00F967A7 /* RecordSoundsViewController.swift */; };
 		EB2090B01C3F312E00F967A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2090AE1C3F312E00F967A7 /* Main.storyboard */; };
 		EB2090B31C3F312E00F967A7 /* Pitch_Perfect.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB2090B11C3F312E00F967A7 /* Pitch_Perfect.xcdatamodeld */; };
 		EB2090B51C3F312E00F967A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB2090B41C3F312E00F967A7 /* Assets.xcassets */; };
@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		EB2090A71C3F312E00F967A7 /* Pitch Perfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pitch Perfect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2090AA1C3F312E00F967A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EB2090AC1C3F312E00F967A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EB2090AC1C3F312E00F967A7 /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSoundsViewController.swift; sourceTree = "<group>"; };
 		EB2090AF1C3F312E00F967A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB2090B21C3F312E00F967A7 /* Pitch_Perfect.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pitch_Perfect.xcdatamodel; sourceTree = "<group>"; };
 		EB2090B41C3F312E00F967A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				EB2090AA1C3F312E00F967A7 /* AppDelegate.swift */,
-				EB2090AC1C3F312E00F967A7 /* ViewController.swift */,
+				EB2090AC1C3F312E00F967A7 /* RecordSoundsViewController.swift */,
 				EB2090AE1C3F312E00F967A7 /* Main.storyboard */,
 				EB3CC3471C495249000F9397 /* PlaySoundsViewController.swift */,
 				EB2090B41C3F312E00F967A7 /* Assets.xcassets */,
@@ -266,7 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB2090AD1C3F312E00F967A7 /* ViewController.swift in Sources */,
+				EB2090AD1C3F312E00F967A7 /* RecordSoundsViewController.swift in Sources */,
 				EB2090AB1C3F312E00F967A7 /* AppDelegate.swift in Sources */,
 				EB3CC3481C495249000F9397 /* PlaySoundsViewController.swift in Sources */,
 				EB2090B31C3F312E00F967A7 /* Pitch_Perfect.xcdatamodeld in Sources */,
