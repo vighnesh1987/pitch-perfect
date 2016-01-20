@@ -44,6 +44,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         super.viewWillAppear(animated)
         stopButton.hidden = true
         recordButton.enabled = true
+        recordingInProgress.hidden = false
+        recordingInProgress.text = "Tap to record"
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,6 +56,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBAction func recordAudio(sender: UIButton) {
         recordingInProgress.hidden = false
+        recordingInProgress.text = "Recording in progress"
         stopButton.hidden = false
         recordButton.enabled = false
         // TODO: Record user's voice
