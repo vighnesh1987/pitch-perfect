@@ -36,7 +36,6 @@
                                 <state key="normal" image="Stop"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xTS-bF-AJT"/>
-                                    <segue destination="Vat-rH-clL" kind="show" id="Kgw-Dl-KRI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -85,6 +84,7 @@
                         <outlet property="recordButton" destination="Kic-su-dUl" id="Oml-v5-6Ws"/>
                         <outlet property="recordingInProgress" destination="C2X-by-jEI" id="fr0-Te-cBM"/>
                         <outlet property="stopButton" destination="TSm-DW-VbP" id="CIS-O9-w2s"/>
+                        <segue destination="Vat-rH-clL" kind="show" identifier="stopRecording" id="Lfc-8i-Fon"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -125,9 +125,26 @@
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k82-Jd-IDm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzq-Kz-vG0">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="Chipmunk"/>
+                                <connections>
+                                    <action selector="chipmunkLike:" destination="Vat-rH-clL" eventType="touchUpInside" id="Mx4-oS-Bsq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kj-v2-Ys8">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="DarthVader"/>
+                                <connections>
+                                    <action selector="darthVaderLike:" destination="Vat-rH-clL" eventType="touchUpInside" id="Xtb-62-alg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Dzq-Kz-vG0" firstAttribute="trailing" secondItem="9Tv-tW-cBn" secondAttribute="trailing" id="4iI-AQ-FU0">
+                                <variation key="widthClass=compact" constant="40"/>
+                            </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="Mpg-BA-v70" secondAttribute="trailing" constant="41" id="Ag0-M2-OxG">
                                 <variation key="widthClass=compact" constant="25"/>
                             </constraint>
@@ -138,6 +155,9 @@
                             <constraint firstItem="9Tv-tW-cBn" firstAttribute="leading" secondItem="Pe0-Yx-sXJ" secondAttribute="leadingMargin" constant="29" id="Qw6-Kb-2gT">
                                 <variation key="widthClass=compact" constant="25"/>
                             </constraint>
+                            <constraint firstItem="Dzq-Kz-vG0" firstAttribute="leading" secondItem="9Tv-tW-cBn" secondAttribute="leading" id="U3K-Z3-C4O">
+                                <variation key="widthClass=compact" constant="50"/>
+                            </constraint>
                             <constraint firstItem="9Tv-tW-cBn" firstAttribute="top" secondItem="LHu-Qn-GYV" secondAttribute="bottom" constant="52" id="V5l-ic-Yyo">
                                 <variation key="widthClass=compact" constant="50"/>
                             </constraint>
@@ -145,18 +165,32 @@
                                 <variation key="widthClass=compact" constant="50"/>
                             </constraint>
                             <constraint firstItem="UGs-Ey-cGk" firstAttribute="centerY" secondItem="Pe0-Yx-sXJ" secondAttribute="centerY" id="dlV-ha-M6i"/>
+                            <constraint firstItem="Dzq-Kz-vG0" firstAttribute="top" secondItem="9Tv-tW-cBn" secondAttribute="bottom" constant="65" id="dno-nA-EE8"/>
+                            <constraint firstItem="Dzq-Kz-vG0" firstAttribute="leading" secondItem="Pe0-Yx-sXJ" secondAttribute="leadingMargin" constant="52" id="njt-me-pD5">
+                                <variation key="widthClass=compact" constant="25"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="4kj-v2-Ys8" secondAttribute="trailing" constant="25" id="rvb-o9-Qxd"/>
+                            <constraint firstItem="4kj-v2-Ys8" firstAttribute="top" secondItem="Mpg-BA-v70" secondAttribute="bottom" constant="65" id="x2E-dc-Ydr"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="9Tv-tW-cBn"/>
                                 <exclude reference="Mpg-BA-v70"/>
                                 <exclude reference="UGs-Ey-cGk"/>
+                                <exclude reference="Dzq-Kz-vG0"/>
+                                <exclude reference="4kj-v2-Ys8"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Qw6-Kb-2gT"/>
                                 <exclude reference="V5l-ic-Yyo"/>
                                 <exclude reference="Ag0-M2-OxG"/>
                                 <exclude reference="ax8-Oz-UnA"/>
+                                <exclude reference="4iI-AQ-FU0"/>
+                                <exclude reference="U3K-Z3-C4O"/>
+                                <exclude reference="dno-nA-EE8"/>
+                                <exclude reference="njt-me-pD5"/>
+                                <exclude reference="rvb-o9-Qxd"/>
+                                <exclude reference="x2E-dc-Ydr"/>
                                 <exclude reference="EQ9-Pw-mZc"/>
                                 <exclude reference="dlV-ha-M6i"/>
                                 <exclude reference="CkI-Oy-cPW"/>
@@ -167,12 +201,20 @@
                                 <include reference="9Tv-tW-cBn"/>
                                 <include reference="Mpg-BA-v70"/>
                                 <include reference="UGs-Ey-cGk"/>
+                                <include reference="Dzq-Kz-vG0"/>
+                                <include reference="4kj-v2-Ys8"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Qw6-Kb-2gT"/>
                                 <include reference="V5l-ic-Yyo"/>
                                 <include reference="Ag0-M2-OxG"/>
                                 <include reference="ax8-Oz-UnA"/>
+                                <exclude reference="4iI-AQ-FU0"/>
+                                <exclude reference="U3K-Z3-C4O"/>
+                                <include reference="dno-nA-EE8"/>
+                                <include reference="njt-me-pD5"/>
+                                <include reference="rvb-o9-Qxd"/>
+                                <include reference="x2E-dc-Ydr"/>
                                 <include reference="EQ9-Pw-mZc"/>
                                 <exclude reference="dlV-ha-M6i"/>
                                 <include reference="CkI-Oy-cPW"/>
@@ -204,6 +246,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Chipmunk" width="100" height="100"/>
+        <image name="DarthVader" width="100" height="100"/>
         <image name="Microphone" width="100" height="100"/>
         <image name="Rabbit" width="100" height="100"/>
         <image name="Snail" width="100" height="100"/>
